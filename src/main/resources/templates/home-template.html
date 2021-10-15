@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html
+        lang="en"
+        xmlns="http://www.w3.org/1999/xhtml"
+        xmlns:th="http://www.thymeleaf.org"
+>
+<head>
+    <meta charset="UTF-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>survivingCodingBootCamp.com</title>
+    <link href="/assets/icon.png" rel="icon">
+    <link href="/css/style.css" rel="stylesheet">
+    <link href="/css/layout.css" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+    <header class="header">
+        <h1 class="header__title">Surviving Coding Boot Camp</h1>
+        <nav class="header__nav">
+            <div class="header__nav-item"><a class="header__nav-link" href="/">Home</a></div>
+            <div class="header__nav-item"><a class="header__nav-link" href="/hashtags">Hashtags</a></div>
+        </nav>
+    </header>
+    <main class="main-content">
+        <p class="welcome">Welcome to Surviving Coding Boot Camp, a blog dedicated to helping you get through boot camp
+            and on to the
+            other side.</p>
+        <section class="main-content__topics topics">
+            <h2 class="topics__title main-content__title">Topics</h2>
+            <nav class="main-content__nav topics__nav">
+                <a class="topics__nav-link" href="#" th:each="topic: ${topics}" th:href="'/topics/'+${topic.id}"
+                   th:text="${topic.name}"></a>
+            </nav>
+        </section>
+    </main>
+</div>
+</body>
+</html>

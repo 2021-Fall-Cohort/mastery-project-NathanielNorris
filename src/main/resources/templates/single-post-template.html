@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title th:text="${post.title}">Document</title>
+    <link href="/assets/icon.png" rel="icon">
+    <link href="/css/style.css" rel="stylesheet"/>
+    <link href="/css/layout.css" rel="stylesheet"/>
+</head>
+
+<body>
+<div class="container">
+    <header class="header">
+        <h1 class="header__title">Surviving Coding Boot Camp</h1>
+        <nav class="header__nav">
+            <div class="header__nav-item"><a class="header__nav-link" href="/">Home</a></div>
+            <div class="header__nav-item"><a class="header__nav-link" href="/hashtags">Hashtags</a></div>
+        </nav>
+    </header>
+    <main class="main-content">
+        <section class="main-content__post post">
+            <h3 class="post__topic-title main-content__topic-title"><a class="main-content__topic-link post__topic-link"
+                                                                       th:href="'/topics/'+${post.topic.id}"
+                                                                       th:text="${post.topic.name}">Topic</a>
+            </h3>
+            <h2 class="post__title main-content__topic-title" th:text="${post.title}">Post Title</h2>
+            <p class="post__content" th:text="${post.content}">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Doloremque blanditiis, aut quae fuga id quis ut.
+                Eligendi necessitatibus blanditiis officia, odio deleniti natus molestiae fugiat ex quod vel aliquam
+                illum.
+            </p>
+        </section>
+    </main>
+</div>
+
+</body>
+
+</html>
