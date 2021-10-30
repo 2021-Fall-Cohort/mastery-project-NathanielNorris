@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <link href="/assets/icon.png" rel="icon">
+    <link href="/css/style.css" rel="stylesheet"/>
+    <link href="/css/layout.css" rel="stylesheet"/>
+</head>
+
+<body>
+<div class="container">
+    <h1 th:text="${hashtag.name}"></h1>
+    <ul>
+        <li th:each="post:${hashtag.posts}">
+            <a th:href="'/posts/'+${post.id}"  th:text="${post.title}"></a>
+        </li>
+    </ul>
+
+
+</div>
+
+</body>
+
+</html>

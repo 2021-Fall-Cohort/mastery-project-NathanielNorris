@@ -26,4 +26,11 @@ public class PostStorageJpaImpl implements PostStorage {
     public void save(Post postToAdd) {
         postRepo.save(postToAdd);
     }
+
+    @Override
+    public Object findAll() {
+        return postRepo.findAll();
+    }
+
+
 }

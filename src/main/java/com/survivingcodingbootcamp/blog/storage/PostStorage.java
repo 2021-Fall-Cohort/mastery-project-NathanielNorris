@@ -8,4 +8,6 @@ public interface PostStorage {
     Post retrievePostById(long l);
 
     void save(Post postToAdd);
+
+    Object findAll();
 }

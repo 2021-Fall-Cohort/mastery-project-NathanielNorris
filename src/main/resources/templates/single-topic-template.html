@@ -32,6 +32,18 @@
             </nav>
         </section>
     </main>
+
+    <form action="/posts/addPost" method = "POST">
+        <label for="PostAuthor">Author</label>
+        <input type="text" id="PostAuthor" name="postAuthor">
+        <label for="PostTitle">Title</label>
+        <input type="text" id="PostTitle" name="postTitle">
+        <label for="Postcontent">Content</label>
+        <input type="text" id="Postcontent" name="postContent">
+        <input type="hidden" name="id" th:value = "${topic.id}">
+        <input type="submit"></input>
+    </form>
+
 </div>
 </body>
 
