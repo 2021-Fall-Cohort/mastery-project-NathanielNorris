@@ -33,6 +33,23 @@
             </p>
         </section>
     </main>
+    <hr>
+    <h1>Hashtags</h1>
+    <ul>
+        <li th:each="hashtag:${post.hashtags}">
+            <a th:text="${hashtag.name}"></a>
+        </li>
+    </ul>
+    <form action="/posts/addHashtag" method = "POST">
+        <label for="HashtagInput"></label>
+        <input type="text" id="HashtagInput" name="hashtag"></input>
+        <input type="hidden" name="id" th:value = "${post.id}">
+        <input type="submit">
+    </form>
+
+
+
+
 </div>
 
 </body>
